@@ -1,0 +1,446 @@
+/* Reset and base styles */
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Hero section */
+.hero {
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+}
+
+.hero-content {
+  color: #fff; /* Change text color to white */
+  text-align: center;
+  max-width: 600px;
+  border-radius: 10px;
+  background-color: transparent; /* Make the background fully transparent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-content h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.hero-content button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.hero-content button a {
+  color: inherit;
+  text-decoration: none;
+}
+.content-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: flex-start; /* Adjust the spacing between the image and text */
+}
+
+.profile-img {
+  width: 300px; /* Adjust the width as needed */
+  height: auto;
+  border-radius: 0; /* Remove border-radius for a square image */
+  order: -1;
+}
+
+.hero-text {
+  max-width: 1000px; /* Adjust the maximum width of the text */
+  margin-left: auto;
+  line-height: 1.2;
+}
+/* Animations */
+/* ... (same as before) ... */
+
+/* Responsive styles */
+/* ... (same as before) ... */
+
+/* Animations */
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-out;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-animate {
+  animation: text-pop 0.5s ease-out;
+}
+
+@keyframes text-pop {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.button-animate {
+  animation: button-pulse 2s infinite;
+}
+
+@keyframes button-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(139, 139, 139, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(139, 139, 139, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(139, 139, 139, 0);
+  }
+}
+
+/* Responsive styles */
+/* ... (same as before) ... */
+
+/* Header and navigation */
+/* Header and navigation */
+header {
+  background-color: transparent; /* Change from previous background color */
+  color: #fff; /* Set text color for better visibility on background image */
+  padding: 10px;
+  position: absolute; /* Position the header on top of the background image */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; /* Ensure the header is on top of other elements */
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.toggle-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.toggle-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+/* Hero section */
+/* ... (same as before) ... */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #4b4b4b;
+    padding: 20px;
+  }
+
+  nav li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .toggle-menu {
+    display: block;
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+}
+
+/* Works section */
+.works {
+  padding: 40px;
+  text-align: center;
+}
+
+.works h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+}
+
+.work-item {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.work-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.work-item h3 {
+  font-size: 24px;
+  margin: 20px 0 10px;
+}
+
+.work-item p {
+  font-size: 16px;
+  color: #fefdfd;
+}
+
+.home {
+  background-image: url('./Images/HD-wallpaper-plain-black-black.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.work {
+  background-image: url('./Images/HD-wallpaper-plain-black-black.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Reset and base styles */
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+/* About section */
+.about-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+  color: #fefdfd;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.about {
+  background-image: url('./Images/HD-wallpaper-plain-black-black.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Reset and base styles */
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header and navigation */
+/* ... (same as before) ... */
+
+/* Contact section */
+.contact-section {
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+  color: #fefdfd;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Footer */
+/* ... (same as before) ... */
+
+.contact {
+  background-image: url('./Images/HD-wallpaper-plain-black-black.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  display: inline-block;
+  background-color: transparent;
+  color: #d3ea7f;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  margin: 10px;
+  transition: all 0.3s ease;
+  box-shadow: none;
+  position: relative;
+  overflow: hidden;
+  border: transparent;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: all 0.5s ease;
+  z-index: -1;
+  border-radius: 30px;
+}
+
+.button:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover::before {
+  left: 0;
+}
